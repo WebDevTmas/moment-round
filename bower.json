@@ -1,0 +1,13 @@
+{
+  "name": "moment-round",
+  "version": "1.0.0",
+  "main": "./dist/moment-round.min.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "moment": ">= 2"
+  }
+}
