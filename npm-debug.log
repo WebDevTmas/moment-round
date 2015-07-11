@@ -1,0 +1,104 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec { raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/thomas/Projects/moment-round',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/thomas/.npm/moment-round/1.0.0/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/thomas/.npm/moment-round/1.0.0/package.tgz',
+9 verbose tar pack   '/Users/thomas/Projects/moment-round' ]
+10 verbose tarball /Users/thomas/.npm/moment-round/1.0.0/package.tgz
+11 verbose folder /Users/thomas/Projects/moment-round
+12 info prepublish moment-round@1.0.0
+13 verbose addLocalTarball adding from inside cache /Users/thomas/.npm/moment-round/1.0.0/package.tgz
+14 silly cache afterAdd moment-round@1.0.0
+15 verbose afterAdd /Users/thomas/.npm/moment-round/1.0.0/package/package.json not in flight; writing
+16 verbose afterAdd /Users/thomas/.npm/moment-round/1.0.0/package/package.json written
+17 silly publish { name: 'moment-round',
+17 silly publish   version: '1.0.0',
+17 silly publish   description: 'Date rounding for Moment.js',
+17 silly publish   keywords: [ 'moment', 'moment.js', 'date', 'round' ],
+17 silly publish   homepage: 'https://github.com/WebDevTmas/moment-round',
+17 silly publish   bugs: { url: 'https://github.com/WebDevTmas/moment-round/issues' },
+17 silly publish   license: 'CC-BY-SA-3.0',
+17 silly publish   author:
+17 silly publish    { name: 'Thomas Vanderhaeghen',
+17 silly publish      email: 'info@tmas.me',
+17 silly publish      url: 'http://www.tmas.me' },
+17 silly publish   main: './dist/moment-round',
+17 silly publish   directories: { lib: './lib' },
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'git+https://git@github.com/WenDevTmas/moment-round.git' },
+17 silly publish   scripts: { build: 'gulp deploy', test: 'gulp test' },
+17 silly publish   devDependencies:
+17 silly publish    { mocha: '>=2.1.0',
+17 silly publish      gulp: '>=3.0.0',
+17 silly publish      'gulp-uglify': '>= 1.2.0',
+17 silly publish      'gulp-rename': '>= 1.2.2',
+17 silly publish      'gulp-mocha': '>= 2.1.2',
+17 silly publish      should: '>= 7.0.0' },
+17 silly publish   peerDependencies: { moment: '>= 2' },
+17 silly publish   readme: '# moment-round\n\nThis is a plugin for [moment.js][moment] and will round date/time to a given interval.\n\n## Examples\n\n``` javascript\nvar m = new moment(); // 2015-06-18 15:30:19\nmoment.round(5, \'seconds\'); // 2015-06-18 15:30:20\nmoment.ceil(3, \'minutes\'); // 2015-06-18 15:33:00\nmoment.floor(16, \'hours\'); // 2015-06-18 00:00:00\nmoment.ceil(21, \'hours\'); // 2015-06-18 21:00:00\nmoment.ceil(20, \'hours\'); // 2015-06-19 00:00:00\n```\n\nPossible values to round to are `hours`, `minutes`, `seconds`\n\n## Installation\n\n### Browser\n\n``` html\n<script src="moment.js"></script>\n<script src="moment-round.js"></script>\n```\n\n### Node /NPM\n\n``` sh\nnpm install moment-round --save-dev\n```\n\nAnd then `require` it:\n\n``` javascript\nvar moment = require(\'moment\');\nrequire(\'moment-round\');\n```\n\n### Bower\n\n``` sh\nbower install moment-round\n```\n\n## Running tests\n```\ngulp test\n```\n\n## License\n\nmoment-round is [LICENSED][license].\n\n[license]: https://creativecommons.org/licenses/by-sa/3.0/us/\n[moment]: http://momentjs.com/\n',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   gitHead: 'e6655058b47a4269c7a250632169e0aa87fea90e',
+17 silly publish   _id: 'moment-round@1.0.0',
+17 silly publish   _shasum: '88f1690fbd04290c2b637f8a9be891a2f9f65213',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name moment-round
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/moment-round
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /Users/thomas/.npm/moment-round/1.0.0/package.tgz
+25 verbose request uri https://registry.npmjs.org/moment-round
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 9:52:07 PM
+28 verbose request using bearer token for auth
+29 verbose request id 5c7f30ecd565aaa5
+30 http request PUT https://registry.npmjs.org/moment-round
+31 http 403 https://registry.npmjs.org/moment-round
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=60',
+32 verbose headers   'content-length': '95',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Sat, 11 Jul 2015 19:52:08 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-lhr6327-LHR',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1436644327.433795,VS0,VE967' }
+33 verbose request invalidating /Users/thomas/.npm/registry.npmjs.org/moment-round on PUT
+34 error publish Failed PUT 403
+35 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : moment-round
+35 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:247:14)
+35 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+35 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:354:22)
+35 verbose stack     at Request.emit (events.js:110:17)
+35 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1207:14)
+35 verbose stack     at Request.emit (events.js:129:20)
+35 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1153:12)
+35 verbose stack     at IncomingMessage.emit (events.js:129:20)
+35 verbose stack     at _stream_readable.js:908:16
+35 verbose stack     at process._tickCallback (node.js:355:11)
+36 verbose statusCode 403
+37 verbose pkgid moment-round
+38 verbose cwd /Users/thomas/Projects/moment-round
+39 error Darwin 14.0.0
+40 error argv "node" "/usr/local/bin/npm" "publish"
+41 error node v0.12.7
+42 error npm  v2.11.3
+43 error code E403
+44 error "You cannot publish over the previously published version 1.0.0." : moment-round
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]
