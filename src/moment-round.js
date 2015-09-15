@@ -23,11 +23,11 @@
     var maxValue ;
     for (var i in keys) {
       var k = keys[i];
-      if (k === key) {
+      if (k === key && typeof this._d['get' + key] === "function") {
         value = this._d['get' + key]();
         maxValue = maxValues[i];
         rounded = true;
-      } else if(rounded) {
+      } else if(rounded && typeof this._d['get' + k] === "function") {
         subRatio *= maxValues[i];
         value += this._d['get' + k]() / subRatio;
         this._d['set' + k](0);
