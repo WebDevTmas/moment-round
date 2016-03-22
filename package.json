@@ -29,6 +29,6 @@
     
   },
   "peerDependencies": {
-    "moment": ">= 2"
+    "moment": ">=2.0.0"
   }
 }
