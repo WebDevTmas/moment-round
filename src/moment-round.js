@@ -9,7 +9,7 @@
 
     var keys = ['Hours', 'Minutes', 'Seconds', 'Milliseconds'];
     var maxValues = [24, 60, 60, 1000];
-    
+
     // Capitalize first letter
     key = key.charAt(0).toUpperCase() + key.slice(1).toLowerCase();
 
@@ -22,15 +22,17 @@
     var subRatio = 1;
     var maxValue ;
     for (var i in keys) {
-      var k = keys[i];
-      if (k === key && typeof this._d['get' + key] === "function") {
-        value = this._d['get' + key]();
-        maxValue = maxValues[i];
-        rounded = true;
-      } else if(rounded && typeof this._d['get' + k] === "function") {
-        subRatio *= maxValues[i];
-        value += this._d['get' + k]() / subRatio;
-        this._d['set' + k](0);
+      if (keys.hasOwnProperty(i)) {
+        var k = keys[i];
+        if (k === key && typeof this._d['get' + key] === "function") {
+          value = this._d['get' + key]();
+          maxValue = maxValues[i];
+          rounded = true;
+        } else if(rounded && typeof this._d['get' + k] === "function") {
+          subRatio *= maxValues[i];
+          value += this._d['get' + k]() / subRatio;
+          this._d['set' + k](0);
+        }
       }
     };
 
