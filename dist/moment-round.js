@@ -21,7 +21,7 @@
     var rounded = false;
     var subRatio = 1;
     var maxValue ;
-    for (var i in keys) {
+    for (var i = 0; i < keys.length; i++) {
       var k = keys[i];
       if (k === key) {
         value = this._d['get' + key]();

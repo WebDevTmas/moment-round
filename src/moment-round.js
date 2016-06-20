@@ -21,13 +21,13 @@
     var rounded = false;
     var subRatio = 1;
     var maxValue ;
-    for (var i in keys) {
+    for (var i = 0; i < keys.length; i++) {
       var k = keys[i];
-      if (k === key && typeof this._d['get' + key] === "function") {
+      if (k === key) {
         value = this._d['get' + key]();
         maxValue = maxValues[i];
         rounded = true;
-      } else if(rounded && typeof this._d['get' + k] === "function") {
+      } else if(rounded) {
         subRatio *= maxValues[i];
         value += this._d['get' + k]() / subRatio;
         this._d['set' + k](0);
