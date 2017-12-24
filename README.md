@@ -46,6 +46,8 @@ hour --> hours
 
 ### Node /NPM
 
+**WARNING:** Not compatible with Webpack. Use [SpotOnINC's fork](https://github.com/SpotOnInc/moment-round/) instead.
+
 ``` sh
 npm install moment-round --save-dev
 ```
