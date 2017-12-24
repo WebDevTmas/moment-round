@@ -5,15 +5,35 @@ This is a plugin for [moment.js][moment] and will round date/time to a given int
 ## Examples
 
 ``` javascript
-var m = new moment(); // 2015-06-18 15:30:19
-moment.round(5, 'seconds'); // 2015-06-18 15:30:20
-moment.ceil(3, 'minutes'); // 2015-06-18 15:33:00
-moment.floor(16, 'hours'); // 2015-06-18 00:00:00
-moment.ceil(21, 'hours'); // 2015-06-18 21:00:00
-moment.ceil(20, 'hours'); // 2015-06-19 00:00:00
+var m = new moment(); 
+m.format( 'YYYY-MM-DD HH:mm:ss.SSS' ); 								// 2015-06-18 15:30:19.123
+m.round( 100, 'milliseconds' ).format( 'YYYY-MM-DD HH:mm:ss.SSS' ); // 2015-06-18 15:30:20.100
+m.round(5, 'seconds').format( 'YYYY-MM-DD HH:mm:ss.SSS' ); 			// 2015-06-18 15:30:20.000
+m.ceil(3, 'minutes').format( 'YYYY-MM-DD HH:mm:ss.SSS' ); 			// 2015-06-18 15:33:00.000
+m.floor(16, 'hours').format( 'YYYY-MM-DD HH:mm:ss.SSS' ); 			// 2015-06-18 00:00:00.000
+m.ceil(21, 'hours').format( 'YYYY-MM-DD HH:mm:ss.SSS' ); 			// 2015-06-18 21:00:00.000
+m.ceil(20, 'hours').format( 'YYYY-MM-DD HH:mm:ss.SSS' ); 			// 2015-06-19 00:00:00.000
 ```
 
-Possible values to round to are `hours`, `minutes`, `seconds`
+Possible values to round to are `hours`, `minutes`, `seconds`, `milliseconds`
+
+###Alias values
+
+``` javascript
+mm --> milliseconds
+Milliseconds --> milliseconds
+millisecond --> milliseconds
+s --> seconds
+Seconds --> seconds
+second --> seconds
+m --> minutes
+Minutes --> minutes
+minute --> minutes
+h --> hours
+H --> hours
+Hours --> hours
+hour --> hours
+```
 
 ## Installation
 
