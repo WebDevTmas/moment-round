@@ -1,5 +1,7 @@
 # moment-round
 
+:warning: Not maintained, please visit 1 of the forks.
+
 This is a plugin for [moment.js][moment] and will round date/time to a given interval.
 
 ## Examples
